@@ -7,6 +7,7 @@ const router = express.Router()
 const authenticate = require("../middleware/authenticate")
 
 const app = express();
+
 app.use(express.json());
 app.use(bodyParser.urlencoded({extended : true}))
 app.use(bodyParser.json())
@@ -18,7 +19,7 @@ const teacherRoute = require("../routes/teacher")
 const studentRoute = require("../routes/student")
 
 
-const port = process.env.PORT
+const port = process.env.PORT || 5000
 
 
 
