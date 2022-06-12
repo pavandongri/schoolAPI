@@ -19,7 +19,7 @@ const teacherRoute = require("../routes/teacher")
 const studentRoute = require("../routes/student")
 
 
-const port = process.env.PORT || 5000
+const port = 3000 || process.env.PORT 
 
 
 
