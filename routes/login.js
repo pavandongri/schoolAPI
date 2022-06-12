@@ -23,7 +23,7 @@ router.get("/admin", (req, res)=>{
     .then((result)=>{
         
         if(result.password===password){
-            const token = jwt.sign({name: result.name}, process.env.ADMIN_KEY, {expiresIn: '24hr'})
+            const token = jwt.sign({name: result.name}, "adminSecretKey", {expiresIn: '24hr'})
             res.send("Admin logged in with token id: " + token);
         }
         else{
@@ -50,7 +50,7 @@ router.get("/teacher", (req, res)=>{
     .then((result)=>{
         
         if(result.password===password){
-            const token = jwt.sign({name: result.name}, process.env.TEACHER_KEY, {expiresIn: '24hr'})
+            const token = jwt.sign({name: result.name}, "teacherSecretKey", {expiresIn: '24hr'})
             res.send("Teacher logged in with token id: " + token);
         }
         else{
@@ -77,7 +77,7 @@ router.get("/student", (req, res)=>{
     .then((result)=>{
         
         if(result.password===password){
-            const token = jwt.sign({name: result.name}, process.env.STUDENT_KEY, {expiresIn: '24hr'})
+            const token = jwt.sign({name: result.name}, "studentSecretKey", {expiresIn: '24hr'})
             res.send("Student logged in with token id: " + token);
         }
         else{

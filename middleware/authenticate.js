@@ -9,7 +9,7 @@ const AdminAuth = (req, res, next)=>{
    
     try{     
         const token = req.body.token
-        const decode = jwt.verify(token, process.env.ADMIN_KEY)
+        const decode = jwt.verify(token, "adminSecretKey")
         req.user = decode
         next()
     }
@@ -26,7 +26,7 @@ const StudentAuth = (req, res, next)=>{
    
     try{
         const token = req.body.token
-        const decode = jwt.verify(token, process.env.STUDENT_KEY)
+        const decode = jwt.verify(token, "studentSecretKey")
         req.user = decode
         next()
     }
@@ -43,7 +43,7 @@ const TeacherAuth = (req, res, next)=>{
    
     try{ 
         const token = req.body.token
-        const decode = jwt.verify(token, process.env.TEACHER_KEY)
+        const decode = jwt.verify(token, "teacherSecretKey")
         req.user = decode
         next()
     }
