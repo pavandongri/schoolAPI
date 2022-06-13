@@ -13,10 +13,10 @@ command: npm install
 step 3 : run the project 
 command : npm run start
 
--> server starts at localhost 3000 
--> use postman to test the api
--> login as admin or teacher or student ( to get authentication tokens ) 
--> now do crud operations provided in postman collections ( for every query auth token should be provided in request.body )
+-> server starts at localhost 3000   \
+-> use postman to test the api    \
+-> login as admin or teacher or student ( to get authentication tokens )     \
+-> now do crud operations provided in postman collections ( for every query auth token should be provided in request.body )       \
 
 postman documentation link : https://documenter.getpostman.com/view/20327907/Uz5NjYtp
 
