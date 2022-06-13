@@ -7,10 +7,10 @@ step 1 : clone the project  /
 command:   git clone https://github.com/pavandongri/schoolAPI.git
 
 
-step 2 : install npm packages 
+step 2 : install npm packages /
 command: npm install
 
-step 3 : run the project 
+step 3 : run the project  /
 command : npm run start
 
 -> server starts at localhost 3000   \
